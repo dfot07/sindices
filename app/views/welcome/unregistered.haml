@@ -1,0 +1,13 @@
+%nav
+	.nav-wrapper
+		= image_tag "logo.png", width:"75"
+		%ul.right.hide-on-med-and-down
+			%li
+				%h5.center-align Registro de la Propiedad y Mercantil del cantón La Troncal
+			
+.row
+	.col.s12
+		.card.large.fondo
+			.card-action.center
+				=link_to new_user_session_path, class: "waves-effect waves-teal btn-large" do
+					<i class="medium material-icons right">perm_identity</i>Inicar sesion
