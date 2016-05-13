@@ -1,0 +1,14 @@
+%nav
+	.nav-wrapper
+		%ul.left.hide-on-med-and-down
+			%li
+				= image_tag "logo.png", width:"75"
+		=link_to "Registro de la Propiedad y Mercantil del cantón La Troncal", "#", class: "brand-logo center"
+		%ul.right.hide-on-med-and-down
+			- if current_user
+				%li
+					=link_to "Cerrar sesión", destroy_user_session_path, method: :delete
+			- else
+				%li
+					=link_to "Iniciar sesión", new_user_session_path
+

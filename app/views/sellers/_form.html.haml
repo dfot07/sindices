@@ -1,0 +1,46 @@
+= form_for @seller do |f|
+	- if @seller.errors.any?
+		#error_explanation
+			%h2= "#{pluralize(@seller.errors.count, "error")} prohibited this seller from being saved:"
+			%ul
+				- @seller.errors.full_messages.each do |msg|
+					%li= msg
+
+	.row
+		.divider
+		.section
+			%h5 Datos Vendedor
+			.col.s12
+				.row
+					.input-field.col.s6
+						= f.text_field :lastnamev
+						%label{for: "#{:lastnamev}"} Apellidos
+					.input-field.col.s6
+						= f.text_field :namev
+						%label{for: "#{:namev}"} Nombres
+		.divider
+		.section
+			%h5 Datos Comprador
+			.col.s12
+				.row
+					.input-field.col.s6
+						= f.text_field :lastnamec
+						%label{for: "#{:lastnamec}"} Apellidos
+					.input-field.col.s6
+						= f.text_field :namec
+						%label{for: "#{:namec}"} Nombres
+		.divider
+		.section
+			%h5 Datos Incripción
+			.col.s12
+				.row
+					.input-field.col.s6
+						= f.text_field :inscription
+						%label{for: "#{:inscription}"} Número de Inscripción
+					.input-field.col.s6
+						= f.text_field :dateinscription
+						%label{for: "#{:dateinscription}"} Año de Inscripción
+			.col.s12.center
+				.row
+					%button{class: "btn waves-effect waves-light", type: "submit", name: "action"}
+						Enviar<i class="material-icons right">send</i>

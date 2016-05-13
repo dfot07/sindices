@@ -1,0 +1,33 @@
+%h1 Listing sellers
+
+%table
+  %thead
+    %tr
+      %th Lastnamev
+      %th Namev
+      %th Lastnamec
+      %th Namec
+      %th Inscription
+      %th Dateinscription
+      %th User
+      %th
+      %th
+      %th
+
+  %tbody
+    - @sellers.each do |seller|
+      %tr
+        %td= seller.lastnamev
+        %td= seller.namev
+        %td= seller.lastnamec
+        %td= seller.namec
+        %td= seller.inscription
+        %td= seller.dateinscription
+        %td= seller.user
+        %td= link_to 'Show', seller
+        %td= link_to 'Edit', edit_seller_path(seller)
+        %td= link_to 'Destroy', seller, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Seller', new_seller_path

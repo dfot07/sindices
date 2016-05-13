@@ -9,10 +9,14 @@
 </head>
 <body>
 	
-	<div style="<%= "display:none" if alert.nil? && notice.nil? %>">
-		<p class="notice"><%= notice %></p>
-		<p class="alert"><%= notice %></p>
-	</div>
+
+	<% flash.each do |type, message| %>
+		<div class="chip waves-effect waves-light btn-large">
+			<%= message %>
+			<i class="material-icons">close</i>
+		</div>
+	<% end %>
+
 	<%= yield %>
 
 </body>

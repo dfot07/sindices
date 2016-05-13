@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Lastnamev:
+  = @seller.lastnamev
+%p
+  %b Namev:
+  = @seller.namev
+%p
+  %b Lastnamec:
+  = @seller.lastnamec
+%p
+  %b Namec:
+  = @seller.namec
+%p
+  %b Inscription:
+  = @seller.inscription
+%p
+  %b Dateinscription:
+  = @seller.dateinscription
+%p
+  %b User:
+  = @seller.user
+
+= link_to 'Edit', edit_seller_path(@seller)
+\|
+= link_to 'Back', sellers_path

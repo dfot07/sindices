@@ -1,0 +1,9 @@
+= render '/welcome/navbar'
+.container
+	.col.s12.m6
+		.card-panel.hoverable.z-depth-4
+			%h3.center-align Ingreso nuevo registro
+
+			= render 'form'
+
+			= link_to 'Regrear menú principal', root_path

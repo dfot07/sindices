@@ -1,0 +1,25 @@
+= render 'navbar'
+
+.container
+	.col.s12.m6
+		.card.large.hoverable.z-depth-4
+			%h1.center-align Bienvenido
+			.row
+				.col.s4.center
+					.card-panel.blue-grey.darken-1.hoverable.z-depth-4
+						=link_to new_seller_path, class: "waves-effect waves-teal" do
+							<i class="large material-icons white-text">recent_actors</i>
+						.card-content.white-text
+							=link_to "Ingresar Vendedor", new_seller_path, class: "waves-effect waves-teal white-text"
+				.col.s4.center
+					.card-panel.blue-grey.darken-1.hoverable.z-depth-4
+						=link_to "#", class: "waves-effect waves-teal" do
+							<i class="large material-icons white-text">recent_actors</i>
+						.card-content.white-text
+							=link_to "Ingresar Comprador", "#", class: "waves-effect waves-teal white-text"
+				.col.s4.center
+					.card-panel.blue-grey.darken-1.hoverable.z-depth-4
+						=link_to "#", class: "waves-effect waves-teal" do
+							<i class="large material-icons white-text">search</i>
+						.card-content.white-text
+							=link_to "Búsqueda", "#", class: "waves-effect waves-teal white-text"

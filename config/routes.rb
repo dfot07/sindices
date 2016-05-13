@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :sellers
   devise_for :users
 
   authenticated :user do
