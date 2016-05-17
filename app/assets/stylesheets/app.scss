@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
 .fondo {
 	background-image: image-url("fondo.jpg");
 	background-size: 100%;
@@ -16,3 +18,37 @@
 .fade-out.two {-webkit-animation-delay: 1.5s;}
 .fade-out.three {-webkit-animation-delay: 2.5s;}
 .fade-out.four {-webkit-animation-delay: 5.5s;}
+
+.logo {
+    text-align: center;
+}
+
+.indonesia {
+    font-family: 'Raleway', sans-serif !important;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 3vw;
+    font-weight: bolder;
+}
+
+.header-wrapper {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.content-wrapper {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+em#fedora-motto {
+    color: #FFFFFF;
+}
+
+#masthead {
+    background: #2BA3D4 image-url("fondo.jpg") no-repeat center center;
+    height: 685px;
+    background-size: 100%;
+}

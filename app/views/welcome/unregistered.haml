@@ -1,8 +1,18 @@
-= render 'navbar'
-	
-.row
-	.col.s12
-		.card.large.fondo
-			.card-action.center
-				=link_to new_user_session_path, class: "waves-effect waves-teal btn-large" do
-					<i class="medium material-icons right">perm_identity</i>Inicar sesion
+%header#masthead.site-header
+	.container
+		.row
+			.col.s12
+				.header-wrapper
+					%div{ class:" card large", style: "background-color: rgba(12, 150, 216, 0.70);"}
+						.card-content.content-wrapper
+						%div
+							%div.logo
+								= image_tag "logo.png", width:"75"
+							.indonesia
+								Registro de la Propiedad y Mercantil del Cantón La Troncal
+							%p
+								%em#fedora-motto
+									Sistema Gestión Índice de Vendedores y Compradores
+							%p
+								=link_to new_user_session_path, class: "waves-effect waves-light btn-large light-blue lighten-1" do
+									<i class="medium material-icons left">perm_identity</i>Iniciar sesion
