@@ -1,10 +1,14 @@
 = form_for @seller do |f|
 	- if @seller.errors.any?
 		#error_explanation
-			%h2= "#{pluralize(@seller.errors.count, "error")} prohibited this seller from being saved:"
+			%h2.chip
+				= "#{@seller.errors.count} errores encontrados:"
+				<i class="material-icons">close</i>
 			%ul
 				- @seller.errors.full_messages.each do |msg|
-					%li= msg
+					%li.chip.waves-effect.waves-light.btn-large
+						= msg
+						<i class="material-icons">close</i>
 
 	.row
 		.divider
@@ -14,10 +18,10 @@
 				.row
 					.input-field.col.s6
 						= f.text_field :lastnamev
-						%label{for: "#{:lastnamev}"} Apellidos
+						%label{for: "#{:lastnamev}", class: "active"} Apellidos
 					.input-field.col.s6
 						= f.text_field :namev
-						%label{for: "#{:namev}"} Nombres
+						%label{for: "#{:namev}", class: "active"} Nombres
 		.divider
 		.section
 			%h5 Datos Comprador
@@ -25,10 +29,10 @@
 				.row
 					.input-field.col.s6
 						= f.text_field :lastnamec
-						%label{for: "#{:lastnamec}"} Apellidos
+						%label{for: "#{:lastnamec}", class: "active"} Apellidos
 					.input-field.col.s6
 						= f.text_field :namec
-						%label{for: "#{:namec}"} Nombres
+						%label{for: "#{:namec}", class: "active"} Nombres
 		.divider
 		.section
 			%h5 Datos Incripción
@@ -36,11 +40,11 @@
 				.row
 					.input-field.col.s6
 						= f.text_field :inscription
-						%label{for: "#{:inscription}"} Número de Inscripción
+						%label{for: "#{:inscription}", class: "active"} Número de Inscripción
 					.input-field.col.s6
 						= f.text_field :dateinscription
-						%label{for: "#{:dateinscription}"} Año de Inscripción
+						%label{for: "#{:dateinscription}", class: "active"} Año de Inscripción
 			.col.s12.center
 				.row
 					%button{class: "btn waves-effect waves-light", type: "submit", name: "action"}
-						Enviar<i class="material-icons right">send</i>
+						Guardar<i class="material-icons right">send</i>

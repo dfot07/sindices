@@ -1,7 +1,12 @@
-%h1 Editing seller
+= render '/welcome/navbar'
+.container
+	.col.s12.m6
+		.card.hoverable.z-depth-4
+			.card-content
+				%h3.center-align Editar
 
-= render 'form'
+				= render 'form'
 
-= link_to 'Show', @seller
-\|
-= link_to 'Back', sellers_path
+			.card-action.center-align
+				= link_to 'Ver todos', sellers_path, class: "btn waves-effect waves-light"
+				= link_to 'Regrasr menú principal', root_path, class: "btn waves-effect waves-light"

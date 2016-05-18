@@ -1,15 +1,22 @@
-%h1 Listing sellers
-
-%table
+.row
+  .col.s12
+    .row.valign-wrapper
+      .col.s6
+        %h3.valign Índice de Vendedores
+      .col.s3
+        =link_to 'Ingresar nuevo registro', new_seller_path, class: "valign btn waves-effect waves-light"
+      .col.s3
+        =link_to 'Regresar menú principal', root_path, class: "valign btn waves-effect waves-light"
+%table.bordered.highlight.centered.responsive-table
   %thead
     %tr
-      %th Lastnamev
-      %th Namev
-      %th Lastnamec
-      %th Namec
-      %th Inscription
-      %th Dateinscription
-      %th User
+      %th Apellidos del Vendedor
+      %th Nombres del Vendedor
+      %th Apellidos del Comprador
+      %th Nombres del Comprador
+      %th Número de Inscripción
+      %th Fecha de Inscripción
+      %th Ingresador por
       %th
       %th
       %th
@@ -23,11 +30,8 @@
         %td= seller.namec
         %td= seller.inscription
         %td= seller.dateinscription
-        %td= seller.user
-        %td= link_to 'Show', seller
-        %td= link_to 'Edit', edit_seller_path(seller)
-        %td= link_to 'Destroy', seller, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= seller.user.email
+        %td= link_to 'Ver', seller
+        %td= link_to 'Editar', edit_seller_path(seller)
+        %td= link_to 'Eliminar', seller, :method => :delete, :data => { :confirm => 'Estás seguro de elimiar el registro?' }
 
-%br
-
-= link_to 'New Seller', new_seller_path

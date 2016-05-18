@@ -1,9 +1,10 @@
 = render '/welcome/navbar'
 .container
 	.col.s12.m6
-		.card-panel.hoverable.z-depth-4
-			%h3.center-align Ingreso nuevo registro
+		.card.hoverable.z-depth-4
+			.card-content
+				%h3.center-align Ingreso nuevo registro
 
-			= render 'form'
-
-			= link_to 'Regrear menú principal', root_path
+				= render 'form'
+			.card-action.center-align
+				= link_to 'Regrear menú principal', root_path, class: "btn waves-effect"

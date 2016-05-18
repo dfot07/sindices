@@ -6,20 +6,33 @@
 			%h1.center-align Bienvenido
 			.row
 				.col.s4.center
-					.card-panel.blue-grey.darken-1.hoverable.z-depth-4
-						=link_to new_seller_path, class: "waves-effect waves-teal" do
-							<i class="large material-icons white-text">recent_actors</i>
-						.card-content.white-text
-							=link_to "Ingresar Vendedor", new_seller_path, class: "waves-effect waves-teal white-text"
+					%ul.collection.with-header.darken-1.hoverable.z-depth-4
+						%li
+							.card-panel.blue-grey.cllection-header
+								%i{class: "medium material-icons white-text left"} recent_actors
+								%h4.white-text Vendedor
+						%li.collection-item
+							=link_to "Ingresar", new_seller_path, class: "btn waves-effect waves-light"
+						%li.collection-item
+							=link_to "Ver todos", sellers_path, class: "btn waves-effect waves-light"
+							
 				.col.s4.center
-					.card-panel.blue-grey.darken-1.hoverable.z-depth-4
-						=link_to "#", class: "waves-effect waves-teal" do
-							<i class="large material-icons white-text">recent_actors</i>
-						.card-content.white-text
-							=link_to "Ingresar Comprador", "#", class: "waves-effect waves-teal white-text"
+					%ul.collection.with-header.darken-1.hoverable.z-depth-4
+						%li
+							.card-panel.blue-grey.cllection-header
+								%i{class: "medium material-icons white-text left"} recent_actors
+								%h4.white-text Comprador
+						%li.collection-item
+							=link_to "Ingresar", "#", class: "btn waves-effect waves-light"
+						%li.collection-item
+							=link_to "Ver todos", "#", class: "btn waves-effect waves-light"
 				.col.s4.center
-					.card-panel.blue-grey.darken-1.hoverable.z-depth-4
-						=link_to "#", class: "waves-effect waves-teal" do
-							<i class="large material-icons white-text">search</i>
-						.card-content.white-text
-							=link_to "Búsqueda", "#", class: "waves-effect waves-teal white-text"
+					%ul.collection.with-header.darken-1.hoverable.z-depth-4
+						%li
+							.card-panel.blue-grey.cllection-header
+								%i{class: "medium material-icons white-text left"} search
+								%h4.white-text Búsqueda
+						%li.collection-item
+							=link_to "Vendedor", "#", class: "btn waves-effect waves-light"
+						%li.collection-item
+							=link_to "Comprador", "#", class: "btn waves-effect waves-light"

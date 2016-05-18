@@ -1,27 +1,46 @@
-%p#notice= notice
-
-%p
-  %b Lastnamev:
-  = @seller.lastnamev
-%p
-  %b Namev:
-  = @seller.namev
-%p
-  %b Lastnamec:
-  = @seller.lastnamec
-%p
-  %b Namec:
-  = @seller.namec
-%p
-  %b Inscription:
-  = @seller.inscription
-%p
-  %b Dateinscription:
-  = @seller.dateinscription
-%p
-  %b User:
-  = @seller.user
-
-= link_to 'Edit', edit_seller_path(@seller)
-\|
-= link_to 'Back', sellers_path
+= render '/welcome/navbar'
+.container
+  .col.s12.m6
+    .card.hoverable.z-depth-4
+      .card-content
+        %h2.card-title.center-align Índice de Vendedores
+        %p#notice= notice
+        .row
+          .divider
+          .section
+            %h5 Datos Vendedor
+            .col.s12
+              .row
+                .col.s6
+                  %b Apellidos:
+                  = @seller.lastnamev
+                .col.s6
+                  %b Nombres:
+                  = @seller.namev
+          .divider
+          .section
+            %h5 Datos Comprador
+            .col.s12
+              .row
+                .col.s6
+                  %b Apellidos:
+                  = @seller.lastnamec
+                .col.s6
+                  %b Nombres:
+                  = @seller.namec
+          .divider
+          .section
+            %h5 Datos Inscripción
+            .col.s12
+              .row
+                .col.s6
+                  %b Número de Inscripción:
+                  = @seller.inscription
+                .col.s6
+                  %b fecha de Inscripción:
+                  = @seller.dateinscription
+      .card-action.center-align
+        = link_to 'Editar', edit_seller_path(@seller), class: "btn waves-effect waves-light"
+        = link_to 'Eliminar', @seller, class: "btn waves-effect waves-light", :method => :delete, :data => { :confirm => 'Estás seguro de elimiar el registro?' }
+        = link_to 'Ver todos', sellers_path, class: "btn waves-effect waves-light"
+        = link_to 'Regrasr menú principal', root_path, class: "btn waves-effect waves-light"
